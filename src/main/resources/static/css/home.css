@@ -68,8 +68,31 @@ nav ul li a{
 }
 .container2{
     height: 100vh;
-    margin-top: 100%;
+    width:100vw;
+    background-color:white;
+    background-position:center;
+ 
+    
+    padding-left:5%;
+    padding-right:5%;
+    box-sizing: border-box;
+    position: relative;
 }
-.container2 h1{
-    margin-top: 5%
+
+
+.content2 h1{
+    padding-left: 7%;
+    color: #333;
+    font-size: 60px;
 }
+.content2 p{
+    line-height: 30px;
+    padding-left: 2%;
+}
+.gato{
+   position: relative;
+    left:70%;
+    height: 400px;
+    width: 400px;
+}
+
