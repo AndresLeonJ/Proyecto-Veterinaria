@@ -10,35 +10,26 @@
     </style>
   </head>
   <body>
-      <div class="center">
-      <h1>Registrarse</h1>
-      <div class="center2">
-      <h4>Para registrarse como un nuevo usuario debe de llenar la siguiente informacion:</h4>
-      </div>
-    <form>
-         <div class="txt field">
-      <label for="nombre">Nombre:</label>
-      <input type="text" id="nombre" name="nombre">
-         </div>
-
-        <div class="txt field">
-      <label for="apellido">Apellido:</label>
-      <input type="text" id="apellido" name="apellido">
-      </div>
-      
-      <div class="txt field">
-      <label for="correo">Correo electronico:</label>
-      <input type="email" id="correo" name="correo">
-      </div>
-
-      <div class="txt field">
-      <label for="contraseña">Contrasena:</label>
-      <input type="password" id="contraseña" name="contraseña">
-      </div>
-
-      <a href="iniciarsesion.html">Registrarse</a>  
-         
-    </form>
-      </div>
+      <div class ="center">
+          <h1>Registro</h1>
+          <h4>Ingrese los siguientes datos para registrarse a la pagina:</h4>
+      <form action="registro.java" method="post">
+          <div class="center2">
+  <label for="username">Nombre de usuario:</label>
+  <input type="text" id="username" name="username" required>
+          </div><!-- comment -->
+          <div class="center2">
+  <label for="email">Correo electronico:</label>
+  <input type="email" id="email" name="email" required>
+</div>
+          <div class="center2">
+  <label for="password">Contrasena:</label>
+  <input type="password" id="password" name="password" required>
+</div>
+          <div class="center2">
+  <a href="iniciarsesion.html">Regsitrarse</a>  
+  </div>
+</form>
+</div>
   </body>
 </html>
