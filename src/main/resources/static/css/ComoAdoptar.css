@@ -7,3 +7,68 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
     Author     : aldav
 */
 
+
+:root{
+
+    fuentePrincipal:font-family: 'ABeeZee', sans-serif;
+    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Krub', sans-serif;
+    font-family: 'Lobster Two', cursive;
+    font-family: 'Staatliches', cursive;
+
+
+}
+
+.container{
+
+}
+
+.containerTitulo{
+    text-align: center;
+    color: #ffffff;
+    font-family: var(--fuentePrincipal);
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-bottom: 6px;
+
+
+}
+.texAdop{
+    text-align: center;
+    color: #ffffff;
+    font-family: var(--fuentePrincipal);
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-bottom: 6px;
+
+
+
+}
+.texAdop1{
+    text-align: center;
+    color: #ffffff;
+    font-family: var(--fuentePrincipal);
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-bottom: 6px;
+    font-size: 20px;
+
+}
+.perrosgatos{
+   padding-left: 25%;
+   height: 600px;
+   
+  
+   
+}
+.footer{
+    text-align: center;
+    color: #ffffff;
+   
+    padding-top: 6px;
+   
+}
+
+
+
+
