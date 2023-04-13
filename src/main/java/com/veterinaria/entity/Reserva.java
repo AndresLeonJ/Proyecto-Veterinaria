@@ -14,7 +14,7 @@ import java.io.Serializable;
  */
 @Entity
 @Table(name = "reservar_cita")
-public class Reservar_Cita implements Serializable {
+public class Reserva implements Serializable {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private long id;
