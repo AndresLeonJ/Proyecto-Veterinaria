@@ -15,9 +15,15 @@ import org.springframework.data.repository.query.Param;
  */
 public interface ClienteRepository extends CrudRepository<Cliente, Long> {
 
-    @Query(value = "SELECT * FROM usuarios WHERE usuarios.cedula LIKE %:filtro%", nativeQuery = true)
+    //La primera línea de código se utiliza para hacerle una consulta a la 
+    //base de datos en donde cometa la funcion de encontrar la cedula que se digito
+              
+////Lo mismo que la primera linea de codigo solo que ahora para encopntrar al cliente por medio de su cedula 
+
+//Y la tercera lo mismo solo que ahora para buscarlos por su nombre 
+    @Query(value = "SELECT * FROM Cliente WHERE Cliente.cedula LIKE %:filtro%", nativeQuery = true)
     List<Cliente> findByCedula(@Param("filtro") String filtro);
 
-    Cliente findByNombre(String username);
+    Cliente findByNombre(String nombre);
 }
 

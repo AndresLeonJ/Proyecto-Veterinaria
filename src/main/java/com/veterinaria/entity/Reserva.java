@@ -13,7 +13,7 @@ import java.io.Serializable;
  * @author Lion
  */
 @Entity
-@Table(name = "reservar_cita")
+@Table(name = "reserva")
 public class Reserva implements Serializable {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)

@@ -19,8 +19,8 @@ import org.springframework.data.repository.query.Param;
  * @author keylo
  */
 public interface ReservaRepository extends CrudRepository<Reserva, Long>{
-     @Query(value = "SELECT * FROM reservacion WHERE reservacion.cedula LIKE %:filtro%", nativeQuery = true)
+     @Query(value = "SELECT * FROM reserva WHERE reserva.cedula LIKE %:filtro%", nativeQuery = true)
     List<Reserva> findByCedula(@Param("filtro") String filtro);
 
-    public Reserva findByNombre(String username);
+    public Reserva findByNombre(String nombre);
 }
