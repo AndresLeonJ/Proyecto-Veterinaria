@@ -14,8 +14,9 @@ import java.io.Serializable;
  */
 @Entity
 @Table(name = "reservar_cita")
-public class Reservar_Cita implements Serializable {@Id
-        @GeneratedValue(strategy= GenerationType.IDENTITY)
+public class Reservar_Cita implements Serializable {
+    @Id
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
     private long id;
     private String nombrep;
     private String apellido1;
