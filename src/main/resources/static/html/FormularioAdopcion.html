@@ -13,8 +13,23 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" >
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        
-  
+
+        <style>
+            html, body {
+                margin: 0;
+                padding: 0;
+                height: 100%;
+                color: #ffffff;
+            }
+
+            body {
+                background-image: url('../images/fondof.jpg');
+                background-size: cover;
+                background-position: center;
+            }
+        </style>
+
+
 
 
     </head>
@@ -59,70 +74,80 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
             <div>   
 
                 <header class="container">
-                    <h1> Fundacion de Adopcion Perros C.R </h1>
-                    <h2> Datos de la mascota que desea adoptar </h2>
+                    <h1 class="texAp"style="text-align:center"> Fundacion de Adopcion Mascotas C.R </h1>
+                    <h2 class="texAp"style="text-align:center"> Ingrese sus datos personales para poder realizar tramites de adopcion </h2>
+
+                    <div>
+                        <form class="row g-3">
+                            <div class="col-md-6">
+                                <label for="inputEmail4" class="form-label">Correo</label>
+                                <input type="email" class="form-control" id="inputEmail4" placeholder="Correo">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="inputPassword4" class="form-label">Contraseña</label>
+                                <input type="password" class="form-control" id="inputPassword4"placeholder="Contraseña" >
+                            </div>
+                            <div class="col-12">
+                                <label for="inputAddress" class="form-label">Nombre</label>
+                                <input type="text" class="form-control" id="inputAddress" placeholder="Nombre">
+                            </div>
+                            <div class="col-12">
+                                <label for="inputAddress2" class="form-label">Primer Apellido</label>
+                                <input type="text" class="form-control" id="inputAddress2" placeholder="Primer Apellido">
+                            </div>
+                            <div class="col-12">
+                                <label for="inputAddress2" class="form-label">Segundo Apellido</label>
+                                <input type="text" class="form-control" id="inputAddress2" placeholder="Segundo Apellido">
+                            </div>
+                            <div class="col-12">
+                                <label for="inputAddress2" class="form-label">Numero de Cedula</label>
+                                <input type="text" class="form-control" id="inputAddress2" placeholder="Cedula">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="inputCity" class="form-label">Ciudad</label>
+                                <input type="text" class="form-control" id="inputCity">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="inputState" class="form-label">Estado Civil</label>
+                                <input type="text" class="form-control" id="inputCity">
+                            </div>
+                            <div class="col-md-2">
+                                <label for="inputZip" class="form-label">Telefono</label>
+                                <input type="text" class="form-control" id="inputZip">
+                            </div>
+
+                    </div>
                 </header>
-                
+
             </div>
-          
 
-            <div>
-                <form class="row g-3">
-                    <div class="col-md-6">
-                        <label for="inputEmail4" class="form-label">Correo</label>
-                        <input type="email" class="form-control" id="inputEmail4" placeholder="Correo">
-                    </div>
-                    <div class="col-md-6">
-                        <label for="inputPassword4" class="form-label">Contraseña</label>
-                        <input type="password" class="form-control" id="inputPassword4"placeholder="Contraseña" >
-                    </div>
-                    <div class="col-12">
-                        <label for="inputAddress" class="form-label">Nombre</label>
-                        <input type="text" class="form-control" id="inputAddress" placeholder="Nombre">
-                    </div>
-                    <div class="col-12">
-                        <label for="inputAddress2" class="form-label">Primer Apellido</label>
-                        <input type="text" class="form-control" id="inputAddress2" placeholder="Primer Apellido">
-                    </div>
-                    <div class="col-12">
-                        <label for="inputAddress2" class="form-label">Segundo Apellido</label>
-                        <input type="text" class="form-control" id="inputAddress2" placeholder="Segundo Apellido">
-                    </div>
-                      <div class="col-12">
-                        <label for="inputAddress2" class="form-label">Numero de Cedula</label>
-                        <input type="text" class="form-control" id="inputAddress2" placeholder="Cedula">
-                    </div>
-                    <div class="col-md-6">
-                        <label for="inputCity" class="form-label">Ciudad</label>
-                        <input type="text" class="form-control" id="inputCity">
-                    </div>
-                    <div class="col-md-4">
-                        <label for="inputState" class="form-label">Estado Civil</label>
-                        <input type="text" class="form-control" id="inputCity">
-                    </div>
-                    <div class="col-md-2">
-                        <label for="inputZip" class="form-label">Telefono</label>
-                        <input type="text" class="form-control" id="inputZip">
-                    </div>
-                 
-                    </div>
-            
-                    <div class="col-16">
-                        <button type="submit" class="btn btn-primary">Enviar</button>
-                    </div>
+            <div style="
+                 text-align: center;
+                 top: 70%;
 
-                </form>
-            </div>
-            
-         
-            <div>
-                 <footer class="footer"style="text-align:center">
+                 left: 60%;
 
-                <p>Todos los derechos reservados. Fidelitas Freelancer </p>
-            </footer>
+                 padding: 20px 20px;">
+                <div class="boton">
+                    <button type="submit" class="btn btn-primary" >Enviar</button>
+                </div>
+            </div>   
 
-                
-            </div>
-           
-    </body>
+
+        </form>
+    </div>
+
+
+    <div>
+        <footer class="footer"style="text-align:center">
+
+            <p>Todos los derechos reservados. Fidelitas Freelancer </p>
+        </footer>
+
+
+    </div>
+
+
+
+</body>
 </html>
