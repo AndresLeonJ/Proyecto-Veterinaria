@@ -17,10 +17,11 @@ import java.io.Serializable;
  */
   @Entity
     @Table(name = "Cliente")
-public class cliente implements Serializable{
+public class Cliente implements Serializable{
       @Id
       @GeneratedValue(strategy= GenerationType.IDENTITY)
     private long id; 
+    private String cedula;
     private String nombre;
     private String apellido1;
     private String apellido2;
@@ -33,6 +34,14 @@ public class cliente implements Serializable{
 
     public void setId(long id) {
         this.id = id;
+    }
+
+    public String getCedula() {
+        return cedula;
+    }
+
+    public void setCedula(String cedula) {
+        this.cedula = cedula;
     }
 
     public String getNombre() {
