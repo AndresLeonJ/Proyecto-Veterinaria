@@ -4,10 +4,10 @@
  */
 package com.veterinaria.service;
 
-import com.veterinaria.entity.Reserva;
+
 import com.veterinaria.entity.Cliente;
 import com.veterinaria.repository.ClienteRepository;
-import com.veterinaria.repository.ReservaRepository;
+
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
