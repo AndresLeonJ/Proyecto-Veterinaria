@@ -23,11 +23,11 @@ public class MascotaService {
         return animalRepository.findById(idAnimal).orElseThrow(() -> new RuntimeException("Animal no encontrado"));
     }
 
-    public void saveAnimal(Mascotas animal) {
+    public void saveMascota(Mascotas animal) {
         animalRepository.save(animal);
     }
 
-    public void deleteAnimal(Long idAnimal) {
+    public void deleteMascota(Long idAnimal) {
         Mascotas animal = animalRepository.findById(idAnimal).orElseThrow(() -> new RuntimeException("Animal no encontrado"));
         animalRepository.delete(animal);
     }

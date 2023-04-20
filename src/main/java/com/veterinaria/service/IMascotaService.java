@@ -19,9 +19,9 @@ public interface IMascotaService {
 
     public Mascotas getAnimalById(long id);
    
-    public void saveAnimal(Mascotas animal);
+    public void guardarMascota(Mascotas animal);
 
-    public void deleteAnimal(long id);
+    public void eliminarMascota(long id);
 
    
 }

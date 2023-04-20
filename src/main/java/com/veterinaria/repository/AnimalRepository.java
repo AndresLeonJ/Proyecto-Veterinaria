@@ -5,13 +5,17 @@
 package com.veterinaria.repository;
 
 import com.veterinaria.entity.Mascotas;
+import java.util.List;
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
-/**
- *
- * @author user
- */
+
+@Repository
 public interface AnimalRepository  extends CrudRepository<Mascotas, Long>{
-    
+       public List<Mascotas> findByEspecie(String especie);
+
+    public List<Mascotas> findByEdadLessThan(int edad);
+
+    public Mascotas findByNombre(String nombre);
     
 }
