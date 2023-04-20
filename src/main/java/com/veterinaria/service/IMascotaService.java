@@ -8,10 +8,6 @@ import com.veterinaria.entity.Mascotas;
 import java.util.List;
 import org.springframework.stereotype.Service;
 
-/**
- *
- * @author user
- */
 
 @Service
 public interface IMascotaService {

@@ -19,8 +19,8 @@ public class MascotaService {
         return (List<Mascotas>) animalRepository.findAll();
     }
 
-    public Mascotas getAnimalById(Long idAnimal) {
-        return animalRepository.findById(idAnimal).orElseThrow(() -> new RuntimeException("Animal no encontrado"));
+    public Mascotas getAnimalById(Long id) {
+        return animalRepository.findById(id).orElseThrow(() -> new RuntimeException("Animal no encontrado"));
     }
 
     public void saveMascota(Mascotas animal) {

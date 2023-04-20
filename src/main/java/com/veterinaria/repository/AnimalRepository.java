@@ -11,11 +11,10 @@ import org.springframework.stereotype.Repository;
 
 
 @Repository
+
 public interface AnimalRepository  extends CrudRepository<Mascotas, Long>{
-       public List<Mascotas> findByEspecie(String especie);
+       public List<Mascotas> findById(long id);
 
-    public List<Mascotas> findByEdadLessThan(int edad);
-
-    public Mascotas findByNombre(String nombre);
+   
     
 }

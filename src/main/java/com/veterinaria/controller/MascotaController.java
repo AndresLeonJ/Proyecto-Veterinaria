@@ -34,6 +34,9 @@ public class MascotaController {
         model.addAttribute("mascota", new Mascotas());
         return "crear-mascota";
     }
+    
+    
+     
 
     @PostMapping("/guardarMascota")
     public String guardarMascota(@ModelAttribute Mascotas mascota) {
