@@ -6,7 +6,6 @@ package com.veterinaria.controller;
 
 import com.veterinaria.entity.Mascotas;
 import com.veterinaria.repository.AnimalRepository;
-import com.veterinaria.service.IMascotaService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -19,8 +18,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 @Controller
 public class AnimalController {
     
-    @Autowired
-    private IMascotaService MascotaService;
 
     @Autowired
     private AnimalRepository animalRepository;

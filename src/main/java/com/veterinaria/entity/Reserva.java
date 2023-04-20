@@ -18,7 +18,7 @@ public class Reserva implements Serializable {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private long id;
-    private String nombrep;
+    private String nombre;
     private String apellido1;
     private String apellido2;
     private long cedula;
@@ -33,12 +33,12 @@ public class Reserva implements Serializable {
         this.id = id;
     }
 
-    public String getNombrep() {
-        return nombrep;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setNombrep(String nombrep) {
-        this.nombrep = nombrep;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     public String getApellido1() {
