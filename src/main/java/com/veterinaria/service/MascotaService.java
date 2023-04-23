@@ -5,31 +5,34 @@
 package com.veterinaria.service;
 
 import com.veterinaria.entity.Mascotas;
-import com.veterinaria.repository.AnimalRepository;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import com.veterinaria.repository.MascotaRepository;
 
 @Service
-public class MascotaService {
+public class MascotaService implements IMascotaService{
     @Autowired
-    private AnimalRepository animalRepository;
+    private MascotaRepository animalRepository;
 
+    @Override
     public List<Mascotas> getAllAnimales() {
         return (List<Mascotas>) animalRepository.findAll();
     }
 
-    public Mascotas getAnimalById(Long id) {
-        return animalRepository.findById(id).orElseThrow(() -> new RuntimeException("Animal no encontrado"));
+    @Override
+    public Mascotas getAnimalById(long id) {
+        return (Mascotas) animalRepository.findById(id);
     }
 
-    public void saveMascota(Mascotas animal) {
-        animalRepository.save(animal);
+    @Override
+    public void guardarMascota(Mascotas animal) {
+       animalRepository.save(animal);
     }
 
-    public void deleteMascota(Long idAnimal) {
-        Mascotas animal = animalRepository.findById(idAnimal).orElseThrow(() -> new RuntimeException("Animal no encontrado"));
-        animalRepository.delete(animal);
+    @Override
+    public void eliminarMascota(long id) {
+    animalRepository.deleteById(id);    
     }
 
     

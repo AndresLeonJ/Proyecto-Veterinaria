@@ -1,11 +1,8 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package com.veterinaria.controller;
 
 import com.veterinaria.entity.Mascotas;
-import com.veterinaria.service.MascotaService;
+import com.veterinaria.service.IMascotaService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -19,7 +16,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 public class MascotaController {
 
     @Autowired
-    private MascotaService mascotaService;
+    private IMascotaService mascotaService;
+    
+   
 
     @GetMapping("/mascotas")
     public String index(Model model) {
@@ -36,11 +35,9 @@ public class MascotaController {
     }
     
     
-     
-
     @PostMapping("/guardarMascota")
     public String guardarMascota(@ModelAttribute Mascotas mascota) {
-        mascotaService.saveMascota(mascota);
+        mascotaService.guardarMascota(mascota);
         return "redirect:/mascotas";
     }
 
@@ -53,7 +50,7 @@ public class MascotaController {
 
     @GetMapping("/eliminarMascota/{id}")
     public String eliminarMascota(@PathVariable("id") Long idMascota) {
-        mascotaService.deleteMascota(idMascota);
+        mascotaService.eliminarMascota(idMascota);
         return "redirect:/mascotas";
     }
 }

@@ -11,13 +11,16 @@ import org.springframework.stereotype.Service;
 
 @Service
 public interface IMascotaService {
-  public List<Mascotas> getAllAnimales();
+  
+    public List<Mascotas> getAllAnimales();
 
     public Mascotas getAnimalById(long id);
    
     public void guardarMascota(Mascotas animal);
 
     public void eliminarMascota(long id);
+    
+   
 
    
 }
