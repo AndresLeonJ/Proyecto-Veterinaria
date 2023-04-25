@@ -7,15 +7,13 @@ package com.veterinaria.service;
 import com.veterinaria.entity.Cliente;
 import java.util.List;
 
-/**
- *
- * @author Lion
- */
+
 public interface IClienteService{
-    public List<Cliente> getAllcliente();
-    public List<Cliente> getclienteByCedula(String cedula);
-    public Cliente getclienteById (long id);
-    public void savecliente(Cliente cliente);
-    public void delete (long id);
-    public Cliente findByNombre (String username);
+   public void  guardarCliente(Cliente cliente);
+    public void eliminarCliente(long id);
+    public Cliente buscarClientePorId(long id);
+   public List<Cliente> buscarTodosLosClientes();
+   
 }
+   
+ 
