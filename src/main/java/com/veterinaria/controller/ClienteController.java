@@ -5,6 +5,8 @@ import com.veterinaria.entity.Cliente;
 import com.veterinaria.service.IClienteService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -49,6 +51,13 @@ public class ClienteController {
     public String eliminarCliente(@PathVariable("id") Long idCliente) {
         clienteService.eliminarCliente(idCliente);
         return "redirect:/clientes";
+    }
+    
+    @GetMapping("/{cedula}")
+    public ResponseEntity<List<Cliente>> findByCedula(@PathVariable("cedula") String cedula) {
+        List<Cliente> resultados = Cliente.findByCedula(cedula);
+        return new ResponseEntity<>(resultados, HttpStatus.OK);
+
     }
 }
 
