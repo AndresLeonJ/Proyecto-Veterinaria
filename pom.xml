@@ -61,28 +61,24 @@
     <build>
         
         <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <excludes>
-                        <exclude>
-                            <groupId>org.projectlombok</groupId>
-                            <artifactId>lombok</artifactId>
-                        </exclude>
-                    </excludes>
-                </configuration>
-            </plugin>
-            
-            <plugin>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-maven-plugin</artifactId>
-      <configuration>
-         <mainClass>com.veterinaria.demo.ProyectoVeterinariaApplication</mainClass> 
-      </configuration>
-   </plugin>
+        <plugin>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-maven-plugin</artifactId>
+            <configuration>
+                <excludes>
+                    <exclude>
+                        <groupId>org.projectlombok</groupId>
+                        <artifactId>lombok</artifactId>
+                    </exclude>
+                </excludes>
+                <mainClass>com.veterinaria.ProyectoVeterinariaApplication</mainClass>
+            </configuration>
+        </plugin>
+        
+    </plugins>
+        
     
-        </plugins>
+       
     </build>
 
 </project>
