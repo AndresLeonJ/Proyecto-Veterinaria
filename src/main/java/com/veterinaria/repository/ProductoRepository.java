@@ -17,7 +17,7 @@ import org.springframework.data.repository.query.Param;
  */
 public interface ProductoRepository  extends CrudRepository<Producto, Long>{
     @Query(value = "SELECT * FROM productos WHERE productos.id LIKE %:filtro%", nativeQuery = true)
-    List<Producto> findByCedula(@Param("filtro") String filtro);
+    List<Producto> findById(@Param("filtro") String filtro);
 
-    public Producto findByMarca(String marca);
+   
 }

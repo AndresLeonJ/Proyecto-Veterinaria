@@ -6,10 +6,11 @@ package com.veterinaria.service;
 
 import com.veterinaria.entity.Producto;
 import com.veterinaria.repository.ProductoRepository;
-import com.veterinaria.repository.ReservaRepository;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 
 /**
  *
@@ -27,22 +28,39 @@ public class ProductoService implements IProductoService {
 
     @Override
     public Producto getProductoById(long id) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return productoRepository.findById(id).orElse(null);
     }
 
     @Override
-    public void saveProducto(Producto productos) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public void saveProducto(Producto producto) {
+        productoRepository.save(producto);
     }
 
     @Override
     public void delete(long id) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        productoRepository.deleteById(id);
     }
 
     @Override
     public Producto findByMarca(String marca) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
-    
+
+    @Override
+    public void crearProducto(Producto producto) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    @Override
+    public void editarProducto(Producto producto) {
+       Producto productoExistente = productoRepository.findById(producto.getId()).orElse(null);
+    if (productoExistente != null) {
+        productoExistente.setMarca(producto.getMarca());
+        productoExistente.setDescripcion(producto.getDescripcion());
+        productoExistente.setPrecio(producto.getPrecio());
+        productoRepository.save(productoExistente);
+    }
+
+   
+    }  
 }

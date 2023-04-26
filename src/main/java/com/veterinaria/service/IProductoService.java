@@ -5,8 +5,8 @@
 package com.veterinaria.service;
 
 import com.veterinaria.entity.Producto;
-import com.veterinaria.entity.Reserva;
 import java.util.List;
+
 
 /**
  *
@@ -18,4 +18,6 @@ public interface IProductoService {
     public void saveProducto(Producto productos);
     public void delete (long id);
     public Producto findByMarca (String marca);
+   public void crearProducto(Producto producto);
+   public void editarProducto(Producto producto);
 }
