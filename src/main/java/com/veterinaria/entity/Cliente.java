@@ -7,6 +7,7 @@ package com.veterinaria.entity;
 
 
 import java.io.Serializable;
+import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -20,6 +21,10 @@ import javax.persistence.Table;
   @Entity
     @Table(name = "Cliente")
 public class Cliente implements Serializable{
+
+    public static List<Cliente> findByCedula(String cedula) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
       @Id
       @GeneratedValue(strategy= GenerationType.IDENTITY)
     private long id; 

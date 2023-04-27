@@ -17,7 +17,7 @@ import javax.persistence.Table;
  * @author Lion
  */
 @Entity
-@Table(name = "darenadopcion")
+@Table(name = "mascotas_en_adopcion")
 public class Dar_En_Adopcion implements Serializable {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
