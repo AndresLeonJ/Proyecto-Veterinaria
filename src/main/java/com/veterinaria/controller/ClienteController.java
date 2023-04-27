@@ -53,12 +53,6 @@ public class ClienteController {
         return "redirect:/clientes";
     }
     
-    @GetMapping("/{cedula}")
-    public ResponseEntity<List<Cliente>> findByCedula(@PathVariable("cedula") String cedula) {
-        List<Cliente> resultados = Cliente.findByCedula(cedula);
-        return new ResponseEntity<>(resultados, HttpStatus.OK);
-
-    }
 }
 
     

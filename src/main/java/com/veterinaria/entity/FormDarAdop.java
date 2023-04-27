@@ -15,7 +15,7 @@ import javax.persistence.Table;
  * @author aldav
  */
 @Entity
-@Table(name="adopciones")
+@Table(name="FormDarAdop")
 public class FormDarAdop implements Serializable {
     
   @Id
