@@ -19,7 +19,7 @@ import javax.persistence.Table;
  * @author Lion
  */
   @Entity
-    @Table(name = "Cliente")
+    @Table(name = "Persona")
 public class Cliente implements Serializable{
 
     public static List<Cliente> findByCedula(String cedula) {
@@ -34,6 +34,7 @@ public class Cliente implements Serializable{
     private String apellido2;
     private String telefono;
     private String email;
+    private int Rol;
 
     public long getId() {
         return id;
@@ -89,6 +90,14 @@ public class Cliente implements Serializable{
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public int getRol() {
+        return Rol;
+    }
+
+    public void setRol(int Rol) {
+        this.Rol = Rol;
     }
     
     
