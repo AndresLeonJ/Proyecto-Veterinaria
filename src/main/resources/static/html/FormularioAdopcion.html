@@ -3,7 +3,7 @@
 Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
 Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
 -->
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
     <head>
         <title>Formulario de Adopcion</title>
         <meta charset="UTF-8">
@@ -34,43 +34,48 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 
     </head>
     <body>
+        
+         
 
         <div>
-            <nav class="navbar navbar-expand-lg bg-body-tertiary">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="home.html">Inicio</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="Mascotas.html">Perros en Adopcion</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Como Adoptar</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Contactos
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Telefono y correo</a></li>
-                                    <li><hr class="dropdown-divider"></li>
-                                    <li><a class="dropdown-item" href="#">Conoce mas sobre nosostros</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link disabled">Fundacion de Adopcion Perros C.R</a>
-                            </li>
-                        </ul>
-                        <form class="d-flex" role="Buscar">
-                            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-                            <button class="btn btn-outline-success" type="submit">Buscar</button>
-                        </form>
+            <header th:fragment="header">
+                <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="home.html">Inicio</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="Mascotas.html">Perros en Adopcion</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Como Adoptar</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Contactos
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Telefono y correo</a></li>
+                                        <li><hr class="dropdown-divider"></li>
+                                        <li><a class="dropdown-item" href="#">Conoce mas sobre nosostros</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link disabled">Fundacion de Adopcion Perros C.R</a>
+                                </li>
+                            </ul>
+                            
+                            <form class="d-flex" role="Buscar">
+                                <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                                <button class="btn btn-outline-success" type="submit">Buscar</button>
+                            </form>
+                        </div>
                     </div>
-                </div>
-            </nav>
+                </nav>
+            </header>
             <div>   
 
                 <header class="container">
@@ -78,14 +83,22 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                     <h2 class="texAp"style="text-align:center"> Ingrese sus datos personales para poder realizar tramites de adopcion </h2>
 
                     <div>
-                        <form class="row g-3">
+                        
+                        <h1 th:text="#{cliente.titulo}"></h1>
+                        
+                        <form th:object="${FormularioAdopcion}"
+                              th:action="@{/save}"
+                              method="POST"
+                              
+                              >
+                              
                             <div class="col-md-6">
                                 <label for="inputEmail4" class="form-label">Correo</label>
                                 <input type="email" class="form-control" id="inputEmail4" placeholder="Correo">
                             </div>
                             <div class="col-md-6">
-                                <label for="inputPassword4" class="form-label">Contraseña</label>
-                                <input type="password" class="form-control" id="inputPassword4"placeholder="Contraseña" >
+                                <label for="inputPassword4" class="form-label">Pais</label>
+                                <input type="password" class="form-control" id="inputPassword4"placeholder="Pais" >
                             </div>
                             <div class="col-12">
                                 <label for="inputAddress" class="form-label">Nombre</label>

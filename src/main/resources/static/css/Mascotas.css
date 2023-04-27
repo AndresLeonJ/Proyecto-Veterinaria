@@ -23,6 +23,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
   padding: 50px;
     
 }
-.p{
-    color: black;
+h5{
+  color:black;
+    
+}
+.card-text{
+    color:black;
 }

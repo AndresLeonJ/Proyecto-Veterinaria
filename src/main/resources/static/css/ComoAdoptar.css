@@ -10,7 +10,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
 
 :root{
 
-    font-family: 'ABeeZee', sans-serif;
+    fuentePrincipal:font-family: 'ABeeZee', sans-serif;
     font-family: 'Cormorant Garamond', serif;
     font-family: 'Krub', sans-serif;
     font-family: 'Lobster Two', cursive;

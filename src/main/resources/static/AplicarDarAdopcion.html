@@ -5,7 +5,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 -->
 <html >
     <head>
-        <title>Datos de Personas tramites de Adoptar</title>
+        <title>Datos de las Mascotas en Adopcion</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet"href="css/AplicarAdopcion.css"/>
@@ -37,8 +37,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 
     </head>
     <body>
-        
-         <h1 th:text="${titulo}"></h1> <!-- Para leer info -->
 
         <header th:fragment="header">
             <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -80,7 +78,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 
         <div class="contenedor">
 
-            <h1 class="texta"style="text-align:center"> Datos Personales para Aplicar Adopcion</h1>
+            <h1 class="texta"style="text-align:center"> Datos de las Mascotas en Adopcion</h1>
 
         </div>
 
@@ -93,13 +91,13 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 
                 <tr>
                     <th scope="col">Correo</th>
-                    <th scope="col">Contraseña</th>
                     <th scope="col">Nombre</th>
                     <th scope="col">Primer Apellido</th>
                     <th scope="col">Segundo Apellido</th>
                     <th scope="col">Numero de Cedula</th>
                     <th scope="col">Ciudad</th>
-                    <th scope="col">Estado Civil</th>
+                    <th scope="col">Raza</th>
+                    <th scope="col">Edad de la Mascota</th>
                     <th scope="col">Telefono</th>
 
 
@@ -116,7 +114,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                     <td>calvo</td>
                     <td>304380148</td>
                     <td>Cartago</td>
-                    <td>Soltero</td>
+                    <td>Pastor</td>
+                    <td>3 </td>
                     <td>86699309</td> 
                 </tr>
                 </thead>
