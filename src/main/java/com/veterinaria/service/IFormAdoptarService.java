@@ -2,9 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Veterinaria.service;
+package com.veterinaria.service;
 
-import Veterinaria.entily.FormAdoptar;
+import com.veterinaria.entity.FormAdoptar;
 import java.util.List;
 
 /**

@@ -2,16 +2,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Veterinaria.service;
-
-import Veterinaria.entily.FormAdoptar;
-import Veterinaria.entily.FormDarAdop;
-
-import Veterinaria.repository.FormDarAdopRepository;
+package com.veterinaria.service;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
+import com.veterinaria.entity.FormDarAdop;
+import com.veterinaria.repository.FormDarAdopRepository;
 /**
  *
  * @author aldav
@@ -47,6 +43,5 @@ public class FormDarAdopService implements IFormDarAdopService {
         formDarAdopRepository.deleteById(Cedula);
 
     }
-
   
 }

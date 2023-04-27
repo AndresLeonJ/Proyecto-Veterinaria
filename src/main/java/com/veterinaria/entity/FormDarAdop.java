@@ -2,19 +2,24 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Veterinaria.entily;
-
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+package com.veterinaria.entity;
 import java.io.Serializable;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 /**
  *
  * @author aldav
  */
 @Entity
-@Table(name="formdaradop")
+@Table(name="adopciones")
 public class FormDarAdop implements Serializable {
+    
+  @Id
+  @GeneratedValue(strategy= GenerationType.IDENTITY)
     
   private String correo;
   private String nombre;
