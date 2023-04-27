@@ -30,7 +30,7 @@
 }
 nav{
     font-size: 15px;
-    padding-left: 40px;
+    padding-left: 10px;
     display:inline-block;
     position:relative;
     left:20%;
@@ -48,6 +48,7 @@ nav ul li a{
 }
 
 .content h1{
+margin-left: 10px;
  color:#333;
  font-size:50px;
 }
@@ -81,17 +82,18 @@ nav ul li a{
 
 
 .content2 h1{
-    padding-left: 7%;
+    padding-left: 35%;
     color: #333;
     font-size: 60px;
 }
 .content2 p{
     line-height: 30px;
-    padding-left: 2%;
+    padding-left: 28%;
+    margin-top: 3%;
 }
 .gato{
-   position: relative;
-    left:70%;
+    padding-top: 2%;
+   padding-left: 35%;
     height: 400px;
     width: 400px;
 }
