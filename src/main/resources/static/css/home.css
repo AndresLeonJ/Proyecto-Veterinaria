@@ -25,12 +25,12 @@
 }
 .logo{
     max-width: max-content;
-    width:140px;
+    width:120px;
     cursor: pointer;
 }
 nav{
     font-size: 15px;
-    padding-left: 10px;
+    padding-left: 0px;
     display:inline-block;
     position:relative;
     left:20%;
